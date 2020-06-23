@@ -1,13 +1,16 @@
 library(nsga2R)
 ##Code to get only nondominated solutions
-setwd("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated")
+setwd("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated\\Tully_Bilevel\\soil_results")
 
+soil = read.csv('inspyred-individuals-file-02072020-164908.csv',header=F)
 soil = read.csv('soil_results\\inspyred-individuals-file-08072019-155742.csv',header=F)
-
+soil = read.csv("doubleindivs/inspyred-individuals-file-02052020-152843.csv",header=F)
 b = fastNonDominatedSorting(cbind(soil$V3,soil$V4))
 nondominated_soil = soil[b[[1]],]
 soil_out = unique(nondominated_soil[,3:28])
-write.csv(soil_out,"soil_results\\nondominated_soil7choices.csv",quote=F,row.names=F)
+write.csv(soil_out,"test192indivs_500gens/nondominated_soil7choices.csv",quote=F,row.names=F)
+
+
 
 basin = read.csv('basin_results\\basin_0_5000_inspyred-individuals-file-08182019-113648.csv',header=F)
 b = fastNonDominatedSorting(cbind(basin$V3,basin$V4))

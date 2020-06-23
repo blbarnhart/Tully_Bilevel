@@ -7,7 +7,7 @@
 ######################################################################
 def import_data():
    
-    out = pd.read_csv("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated\\Fulldata.csv")
+    out = pd.read_csv("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated\\Tully_Bilevel\\Fulldata.csv")
     
     #print(list(out))
     

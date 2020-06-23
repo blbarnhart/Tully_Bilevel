@@ -8,7 +8,7 @@
 
 def import_data():
    
-    out = pd.read_csv("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated\\Fulldata.csv")
+    out = pd.read_csv("C:\\Users\\BBarnhart.DOMAIN1\\OneDrive - National Council for Air and Stream Improvement Inc\\Projects\\Other\\Legacy\\brisbane\\7_choices_updated\\Tully_Bilevel\\Fulldata.csv")
     
     #print(list(out))
     
@@ -188,8 +188,8 @@ def main():
                           mp_evaluator=evaluate_cmatrix,
                           mp_num_ncpus=12,
                           bounder=inspyred.ec.Bounder(0,0.06),
-                          pop_size=96,
-                          max_generations=100,
+                          pop_size=192,
+                          max_generations=500,
                           maximize=False,
                           crossover_rate=0.75,
                           sbx_distribution=10,
